@@ -1,5 +1,10 @@
 const express = require('express');
 const app = express();
+//config the app to use pug
+const path = require('path');
+app.set('view engine', 'pug');
+app.set('views', path.join(__dirname, 'views'));
+app.use(express.static(path.join(__dirname, '/public')));
 const APIError = require('./helpers/APIError');
 // uncomment below to use morgan for basic logging
 const morgan = require('morgan');

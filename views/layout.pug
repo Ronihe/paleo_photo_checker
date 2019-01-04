@@ -1,0 +1,29 @@
+//- Like PHP, we can include content of another file in a file.
+//- If another file extension is `.pug`, then it's content will be compiled.
+//- If another files is non-pug file, then it's content will be included as raw text.
+//- If no file extenstion is given, `.pug` is automatically appended to the file name.\\
+
+html
+	head
+		title Go Paleo
+		link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous")
+		link(rel="stylesheet", href="/style.css")
+
+	body
+		
+		div
+		.container
+			img(src="https://images.agoramedia.com/everydayhealth/gcms/8-Paleo-Swaps-for-Weight-Loss-01-722x406.jpg", alt="paleo", align="middle")
+		
+			
+			P.lead.text-info This is a Paleo photo checking app.
+			
+			block content
+				p This page doesn't have any content yet.
+			
+		script(src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous")
+		script(type="module" src="/script.js")
+		
+		
+	
+		

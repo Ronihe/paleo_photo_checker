@@ -12,6 +12,10 @@ const FOOD_MODEL = 'bd367be194cf45149e75f01d59f77ba7';
 // allow CORS on all routes in this router page
 router.use(cors());
 
+router.get('/test', (req, res, next) => {
+  res.render('homepage');
+});
+
 /** default get on route /paleo*/
 router.post('/', async (req, res, next) => {
   const { encodedpic } = req.body;
